@@ -51,6 +51,12 @@ And try to find the matching route:
 
 In order to run the tests properly, make sure you provided your MapTP credentials as shown above.
 
+== IMPORTANT NOTE
+
+Again, this is not an official client of MapTP or NAVTEQ but a private project.
+
+I you're looking for the official clients/APIs head over to http://www.nn4d.com
+
 == LICENSE:
 
 (The MIT License)

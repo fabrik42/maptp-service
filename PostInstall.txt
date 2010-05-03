@@ -1,7 +1,6 @@
 
-For more information on maptp-service, see http://maptp-service.rubyforge.org
+For more information on maptp-service, see http://github.com/ffwdme/maptp-service
 
-NOTE: Change this information in PostInstall.txt 
-You can also delete it if you don't want it.
-
-
+Note:
+This is not an official client of MapTP or NAVTEQ.
+I you're looking for the official clients/APIs head over to http://www.nn4d.com
