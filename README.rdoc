@@ -1,6 +1,6 @@
 = maptp-service
 
-== _FINALLY, A RUBY CLIENT FOR MAP TP!_
+_FINALLY, A RUBY CLIENT FOR MAP TP!_
 
 * http://github.com/ffwdme/maptp-service
 
@@ -20,6 +20,11 @@ For more information head over to http://www.nn4d.com
 * more to come...
  
 == SYNOPSIS:
+
+First of all you need to provide your MapTP credentials.
+For example if your Map24 id is "123ABC" and bound to the server maptp12.map24.com you'll enter
+
+    MapTP.set_credentials '123ABC', 'maptp12'
 
 Given, you have two coordinates to create a route for:
 
@@ -41,6 +46,10 @@ And try to find the matching route:
 == INSTALL:
 
     sudo gem install maptp-service
+
+== TESTING:
+
+In order to run the tests properly, make sure you provided your MapTP credentials as shown above.
 
 == LICENSE:
 
