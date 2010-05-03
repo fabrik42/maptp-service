@@ -13,7 +13,7 @@ In order to use them, you need your MapTP credentials aka your Map24 id.
 
 For more information head over to http://www.nn4d.com
 
-*Note*: This is *not* an official client of MapTP or NAVTEQ, but a private project.}
+*Note*: This is *not* an official client of MapTP or NAVTEQ, but a private project. :)}
   s.email = ["christian@ffwdme.com"]
   s.extra_rdoc_files = ["History.txt", "Manifest.txt", "PostInstall.txt", "nbproject/private/rake-d.txt"]
   s.files = ["History.txt", "Manifest.txt", "PostInstall.txt", "README.rdoc", "Rakefile", "lib/maptp-service.rb", "lib/maptp-service/parser/route.rb", "lib/maptp-service/routing.rb", "nbproject/private/private.properties", "nbproject/private/rake-d.txt", "nbproject/project.properties", "nbproject/project.xml", "script/console", "script/destroy", "script/generate", "spec/maptp-service_spec.rb", "spec/spec.opts", "spec/spec_helper.rb", "tasks/rspec.rake"]
@@ -21,7 +21,7 @@ For more information head over to http://www.nn4d.com
   s.rdoc_options = ["--main", "README.rdoc"]
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{maptp-service}
-  s.rubygems_version = %q{1.3.5}
+  s.rubygems_version = %q{1.3.6}
   s.summary = %q{This gem provides access to the MapTP web services}
 
   if s.respond_to? :specification_version then

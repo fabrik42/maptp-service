@@ -1,8 +1,8 @@
 = maptp-service
 
-_FINALLY, A RUBY CLIENT FOR MAP TP!_
+== FINALLY, A RUBY CLIENT FOR MAP TP!
 
-* http://github.com/ffwdme/maptp-service
+Rpository: http://github.com/ffwdme/maptp-service
 
 == DESCRIPTION:
 
@@ -17,7 +17,7 @@ For more information head over to http://www.nn4d.com
 == FEATURES/PROBLEMS:
 
 * At this point, only a very simple routing request is implemented.
-* more to come...
+* more to come... 
  
 == SYNOPSIS:
 
