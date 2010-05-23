@@ -16,6 +16,12 @@ before(:each) do
 
     @routing = MapTP::Routing.new
 
+    @search_term = "Downing Street 10 London"
+
+    @wrong_search_term = "x12asd85647c asc354asc68ac asc365a4s64a8s4d65hgf4df"
+
+    @geocoding = MapTP::Geocoding.new
+
   end
 
   it "should calculate a route and return it as a hash" do
@@ -28,7 +34,7 @@ before(:each) do
 
   end
 
-  it "should wrong route" do
+  it "should return an error hash when trying to resolve an impossible route" do
 
     @wrong_route = @routing.find_route_by_coordinates @wrong_start_coordinate, @wrong_destination_coordinate
 
@@ -38,5 +44,23 @@ before(:each) do
 
   end
 
+  it "should resolve a search term to geocoded adresses and return them as a hash" do
+
+    @address = @geocoding.find_coordinates_by_text(@search_term)
+
+    @address.should be_kind_of(Hash)
+
+    @address[:results].should be_kind_of(Array)
+
+  end
+
+  it "should return an error hash when trying to geocode an impossible search term" do
+    
+    @wrong_address = @geocoding.find_coordinates_by_text(@wrong_search_term)
+
+    @wrong_address.should be_kind_of(Hash)
+
+    @wrong_address[:ERROR].should be_instance_of(String)
+  end
   
 end

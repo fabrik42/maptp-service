@@ -2,21 +2,26 @@
 
 Gem::Specification.new do |s|
   s.name = %q{maptp-service}
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Christian Bäuerlein"]
-  s.date = %q{2010-05-03}
+  s.date = %q{2010-05-23}
   s.description = %q{This gem provides access to the MapTP web services.
 
 In order to use them, you need your MapTP credentials aka your Map24 id.
 
 For more information head over to http://www.nn4d.com
 
+You should consider that this client solely works with WGS´84 coordinates in the Decimal Degrees format.
+Usually MapTP services work with the Decimal Minutes format, but because Decimal Degrees are much more
+established we use it for this lib. To work with MapTP the parameters as well as the responses are
+converted internally.
+
 *Note*: This is *not* an official client of MapTP or NAVTEQ, but a private project. :)}
   s.email = ["christian@ffwdme.com"]
-  s.extra_rdoc_files = ["History.txt", "Manifest.txt", "PostInstall.txt", "nbproject/private/rake-d.txt"]
-  s.files = ["History.txt", "Manifest.txt", "PostInstall.txt", "README.rdoc", "Rakefile", "lib/maptp-service.rb", "lib/maptp-service/parser/route.rb", "lib/maptp-service/routing.rb", "nbproject/private/private.properties", "nbproject/private/rake-d.txt", "nbproject/project.properties", "nbproject/project.xml", "script/console", "script/destroy", "script/generate", "spec/maptp-service_spec.rb", "spec/spec.opts", "spec/spec_helper.rb", "tasks/rspec.rake"]
+  s.extra_rdoc_files = ["History.txt", "Manifest.txt", "PostInstall.txt"]
+  s.files = ["History.txt", "Manifest.txt", "PostInstall.txt", "README.rdoc", "Rakefile", "lib/maptp-service.rb", "lib/maptp-service/parser/geocoding_result.rb", "lib/maptp-service/geocoding.rb", "lib/maptp-service/parser/route.rb", "lib/maptp-service/routing.rb", "script/console", "script/destroy", "script/generate", "spec/maptp-service_spec.rb", "spec/spec.opts", "spec/spec_helper.rb", "tasks/rspec.rake"]
   s.post_install_message = %q{PostInstall.txt}
   s.rdoc_options = ["--main", "README.rdoc"]
   s.require_paths = ["lib"]

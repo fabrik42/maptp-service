@@ -4,12 +4,10 @@ PostInstall.txt
 README.rdoc
 Rakefile
 lib/maptp-service.rb
+lib/maptp-service/parser/geocoding_result.rb
+lib/maptp-service/geocoding.rb
 lib/maptp-service/parser/route.rb
 lib/maptp-service/routing.rb
-nbproject/private/private.properties
-nbproject/private/rake-d.txt
-nbproject/project.properties
-nbproject/project.xml
 script/console
 script/destroy
 script/generate

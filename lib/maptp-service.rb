@@ -6,7 +6,9 @@ $:.unshift(File.dirname(__FILE__)) unless
   $:.include?(File.dirname(__FILE__)) || $:.include?(File.expand_path(File.dirname(__FILE__)))
 
 require "maptp-service/routing"
+require "maptp-service/geocoding"
 require "maptp-service/parser/route"
+require "maptp-service/parser/geocoding_result"
 
 # = A ruby client for MapTP services.
 #
@@ -23,7 +25,7 @@ require "maptp-service/parser/route"
 
 module MapTP
   
-  VERSION = '0.0.1'
+  VERSION = '0.0.2'
 
 
   def self.set_credentials( map24id, maptp_server )

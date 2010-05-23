@@ -16,4 +16,3 @@ require 'maptp-service'
 # to the server maptp12.map24.com you'll enter
 #
 # MapTP.set_credentials '123ABC', 'maptp12'
-

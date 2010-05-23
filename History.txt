@@ -1,3 +1,9 @@
+=== 0.0.2 2010-05-23
+
+* 1 major enhancement:
+  * Added geocoding (search free)
+
+
 === 0.0.1 2010-05-03
 
 * 1 major enhancement:

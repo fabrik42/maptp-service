@@ -2,7 +2,11 @@
 
 == FINALLY, A RUBY CLIENT FOR MAP TP!
 
-Rpository: http://github.com/ffwdme/maptp-service
+Repository: http://github.com/ffwdme/maptp-service
+
+Gem: http://rubygems.org/gems/maptp-service
+
+Bug Tracker: http://github.com/ffwdme/maptp-service/issues
 
 == DESCRIPTION:
 
@@ -12,19 +16,42 @@ In order to use them, you need your MapTP credentials aka your Map24 id.
 
 For more information head over to http://www.nn4d.com
 
+You should consider that this client solely works with WGS´84 coordinates in the Decimal Degrees format.
+Usually MapTP services work with the Decimal Minutes format, but because Decimal Degrees are much more
+established we use it for this lib. To work with MapTP the parameters as well as the responses are
+converted internally.
+
 *Note*: This is *not* an official client of MapTP or NAVTEQ, but a private project. :)
 
 == FEATURES/PROBLEMS:
 
-* At this point, only a very simple routing request is implemented.
+* A very simple routing request (takes not much options).
+* Free search for geocoding.
 * more to come... 
  
 == SYNOPSIS:
+
+=== Setup
 
 First of all you need to provide your MapTP credentials.
 For example if your Map24 id is "123ABC" and bound to the server maptp12.map24.com you'll enter
 
     MapTP.set_credentials '123ABC', 'maptp12'
+
+=== Geocoding (free search)
+
+Create a new geocoding object
+
+    geocoding = MapTP::Geocoding.new
+
+Try to find addresses/points/objects matching a search term, e.g. "Times Square, New York", "Zeil Frankfurt", "Downing Street 10 London"
+
+    results = geocoding.find_coordinates_by_text("Downing Street 10 London")
+
+This will return either a hash containing the objects found or in case something went wrong
+a hash with a key ":ERROR" that holds the error informations.
+
+=== Routing
 
 Given, you have two coordinates to create a route for:
 
@@ -38,6 +65,9 @@ Just create a new routing object:
 And try to find the matching route:
 
     route = routing.find_route_by_coordinates start_coordinate, destination_coordinate
+
+This will return either a hash containing the route informations or in case something went wrong
+a hash with a key ":ERROR" that holds the error informations.
 
 == REQUIREMENTS:
 
@@ -55,7 +85,7 @@ In order to run the tests properly, make sure you provided your MapTP credential
 
 Again, this is not an official client of MapTP or NAVTEQ but a private project.
 
-I you're looking for the official clients/APIs head over to http://www.nn4d.com
+If you're looking for the official clients/APIs head over to http://www.nn4d.com
 
 == LICENSE:
 
