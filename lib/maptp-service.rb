@@ -25,7 +25,7 @@ require "maptp-service/parser/geocoding_result"
 
 module MapTP
   
-  VERSION = '0.0.2'
+  VERSION = '0.0.3'
 
 
   def self.set_credentials( map24id, maptp_server )

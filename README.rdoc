@@ -2,11 +2,11 @@
 
 == FINALLY, A RUBY CLIENT FOR MAP TP!
 
-Repository: http://github.com/ffwdme/maptp-service
+Repository: http://github.com/fabrik42/maptp-service
 
 Gem: http://rubygems.org/gems/maptp-service
 
-Bug Tracker: http://github.com/ffwdme/maptp-service/issues
+Bug Tracker: http://github.com/fabrik42/maptp-service/issues
 
 == DESCRIPTION:
 

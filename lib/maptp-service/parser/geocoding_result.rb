@@ -27,12 +27,13 @@ module MapTP
 
         results = resp[:search_free_response][:map_search_response][:alternatives][:item]
 
-        # Return empty array if no results are returned
-        return { :results => [], :ERROR => "No match found" } unless results
 
         output = Hash.new
 
-        output[:results] = Array.new        
+        output[:results] = Array.new
+
+        # Return empty array if no results are returned
+        return output unless results
 
         results.each do |result|
 
